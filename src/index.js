@@ -1,5 +1,8 @@
+import ('./style.css');
 const dayjs = require('dayjs');
 const timezone = require('dayjs/plugin/timezone');
+
+
 dayjs.extend(timezone);
 
 //DOM
@@ -36,5 +39,4 @@ function setValues(){
     timeText.textContent = actualTime();
     dateText.textContent = actualDate();
 }
-setValues();
-//setInterval(setValues, 1000);
+setInterval(setValues, 1000);
